@@ -295,8 +295,23 @@ blockquote {
 }
 
 ul li {
-  list-style: disc inside;
+  list-style: square inside;
   padding-left: 20px;
+}
+
+ul ul li {
+  list-style: disc inside;
+  padding-left: 40px;
+}
+
+ul ul ul li {
+  list-style: disc inside;
+  padding-left: 60px;
+}
+
+ul ul ul ul li {
+  list-style: disc inside;
+  padding-left: 80px;
 }
 
 ol li {
