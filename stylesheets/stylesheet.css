@@ -297,11 +297,15 @@ blockquote {
 ul li {
   list-style: square inside;
   padding-left: 20px;
+  color: #d5000d;
 }
+
+li span {color: #6d6d6d;}
 
 ul ul li {
   list-style: disc inside;
   padding-left: 40px;
+  color: #6d6d6d;
 }
 
 ul ul ul li {
