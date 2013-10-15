@@ -38,7 +38,7 @@
 
 <p>El paquete ha sido desarrollado y es mantenido por Alfredo Sánchez Alberca <a href="mailto:asalber@ceu.es">asalber@ceu.es</a> del Departamento de Matemáticas de la Universidad San Pablo CEU de Madrid.</p>
 
-<p>Por favor, si descubre algún error o tiene cualquier sugerencia se agradecería que se pusiese en contacto con el autor. </p>
+<p>Si descubre algún error o tiene cualquier sugerencia, por favor, envíeselo al autor. </p>
 
 <h3>
 <a name="instalacin" class="anchor" href="#instalacin"><span class="octicon octicon-link"></span></a>Instalación</h3>
@@ -53,7 +53,7 @@
 <p>Para instalar RKTeaching deben seguirse los mismos pasos que para instalar cualquier paquete de R: 
 <ol>
 <li>Descargar el paquete rk.Teaching de aquí y guardarlo en el directorio descargas.</li>
-<li>Arrancar R</li>
+<li>Arrancar R.</li>
 <li>Establecer como directorio de trabajo el directorio descargas donde se ha descargado el paquete:
 <code>
 setwd("ruta_a_descargas")
@@ -74,15 +74,16 @@ install.packages("rk.Teaching",repos=NULL,dep=True)
 <ul>
   <li>Manipulación de datos </li>
   <ul>
-  	<li>Filtrado datos </li>
+  	<li>Filtrar datos </li>
     <li>Calcular variable </li>
   	<li>Recodificar variable </li>
   	<li>Ponderar datos </li>
+  	<li>Tipificar variables</li>
   </ul>
-  <li>Tabulación de frecuencias </li>
+  <li>Distribución de frecuencias </li>
   <ul>
-    <li>Tablas de frecuencias para datos sin agrupar </li>
-    <li>Tablas de frecuencias para datos agrupados </li>
+    <li>Tablas de frecuencias</li>
+    <li>Tablas de frecuencias bidimensionales</li>
   </ul>
   <li>Gráficos </li>
   <ul>
@@ -90,7 +91,6 @@ install.packages("rk.Teaching",repos=NULL,dep=True)
     <li>Histograma </li>
     <li>Diagrama de sectores </li>
     <li>Diagrama de caja </li>
-    <li>Diagrama de puntos </li>
     <li>Diagrama de medias </li>
     <li>Diagrama de interacción </li>
     <li>Diagrama de dispersión </li>
@@ -221,7 +221,10 @@ install.packages("rk.Teaching",repos=NULL,dep=True)
 <img alt="Asistente" src="images/wizard.png">  
 <li> <span>Salidas en HTML que presentan los resultados de los análisis y sus interpretaciones de manera clara y concisa.</span> 
 <img alt="Salida" src="images/output.png">  
+<li> Gráficos sencillos basados en el moderno paquete ggplot2. 
+<img alt="Salida gráfica" src="images/graphics1.png">  
 <li> <span>Posibilidad mostrar el desarrollo de los cálculos de algunos procedimientos estadísticos.</span> 
+<img alt="Salida gráfica" src="images/detailed_calculation.png">  
 </ul>
 
 
