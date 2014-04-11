@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content=Un paquete de R para la enseñanza de Estadística>
+<meta name="keywords" content="page.keywords">
+<meta name="author" content="site.author">
+
+<title>
+   RKTeaching
+</title>
+
+<!-- Bootstrap core CSS styles-->
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Documentation extras CSS styles-->
+<link href="/assets/css/docs.min.css" rel="stylesheet">
+
+<!-- Table of contents Tocify CSS styles -->
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+<link href="/assets/css/jquery.tocify.css" rel="stylesheet">
+<link href="/assets/css/prettify.css" type="text/css" rel="stylesheet" />
+
+
+<!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<!-- Favicons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+                               <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-146052-10']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+  </head>
+  <body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <!-- Docs master nav -->
+    <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">Aprende con Alf</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="/getting-started"></a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://blog.getbootstrap.com" onclick="_gaq.push(['_trackEvent', 'Navbar', 'Community links', 'Blog']);">Blog</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <!-- Docs page layout -->
+    <div class="bs-docs-header">
+      <div class="container">
+        <h1>RKTeaching</h1>
+        <p>Un paquete de R para la enseñanza de Estadística</p>
+        <div id="carbonads-container"><div class="carbonad"><div id="azcarbon"></div><img alt="Imagen de cabecera" height="200px" src="/images/imagen-cabecera1.png"></div></div>
+
+      </div>
+    </div>
+
+    <div class="container bs-docs-container">
+      <div class="row">
+      <!-- SIDEBAR -->
+      <div class="col-md-3">
+      	<div class="bs-docs-sidebar hidden-print affix" id="toc" role="complementary">
+<!--       		<div id="toc"></div> -->
+<!--           <div class="bs-docs-sidebar hidden-print" role="complementary"> -->
+<!--           	<ul class="nav" id="toc"></ul> -->
+ 
+<!--           </div> -->
+        </div>
+      </div>
+        <!-- MAIN CONTENT -->
+        <div class="col-md-9" role="main">
+			<div class="bs-docs-section" id="content">
+			
+			 <h2 id="qu-es-rkteaching">¿Qué es RKTeaching?</h2>
+
+<p>RKTeaching es un paquete de <a href="http://www.r-project.org/">R</a> que proporciona un plugin para la interfaz gráfica <a href="http://rkward.sourceforge.net/">RKWard</a> añadiendo nuevos menús y cuadros de diálogo especialmente diseñandos para la enseñanza de Estadística.</p>
+
+<p>El paquete ha sido desarrollado y es mantenido por Alfredo Sánchez Alberca <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#097;&#115;&#097;&#108;&#098;&#101;&#114;&#064;&#099;&#101;&#117;&#046;&#101;&#115;">&#097;&#115;&#097;&#108;&#098;&#101;&#114;&#064;&#099;&#101;&#117;&#046;&#101;&#115;</a> del Departamento de Matemáticas de la Universidad San Pablo CEU de Madrid.</p>
+
+<p>Si descubre algún error o tiene cualquier sugerencia, por favor, envíeselo por correo al autor o bien indíquelo como un <a href="https://github.com/asalber/rkTeaching_es/issues">issue en Github</a>.</p>
+
+<h2 id="instalacin">Instalación</h2>
+
+<p>Requisitos previos:
+1. Tener instalado R. Puede descargarse desde <a href="http://www.r-project.org/">http://www.r-project.org/</a>.
+2. Tener instalado RKWard. Puede descargarse desde <a href="http://rkward.sourceforge.net/">http://rkward.sourceforge.net/</a>.</p>
+
+<p>La mejor forma de instalar RKTeaching desde este repositorio es utilizando el paquete de R <code>devtools</code>. Los pasos a seguir, utilizando R en línea de comandos son:</p>
+
+<ol>
+  <li>
+    <p>Instalar el paquete <code>devtools</code> (si no lo tienes ya instalado):</p>
+
+    <p><code>
+install.package('devtools')
+</code></p>
+  </li>
+  <li>
+    <p>Cargar el paquete <code>devtools</code>:</p>
+
+    <p><code>
+library(devtools)
+</code></p>
+  </li>
+  <li>
+    <p>Instalar RKTeaching desde el <a href="http://github.com/asalber">repositorio de Github</a>:</p>
+
+    <p><code>
+install_github("asalber/rkTeaching_es")
+</code></p>
+  </li>
+</ol>
+
+<h2 id="procedimientos-estadsticos">Procedimientos estadísticos</h2>
+<p>Una vez instalado, al arrancar RKWard aparecerá un nuevo menú <code>Teaching</code> con los siguientes procedimientos estadísticos:</p>
+
+<ul>
+  <li>
+    <p>Manipulación de datos</p>
+
+    <ul>
+      <li>Filtrar datos</li>
+      <li>Calcular variable</li>
+      <li>Recodificar variable</li>
+      <li>Ponderar datos</li>
+      <li>Tipificar variables</li>
+    </ul>
+  </li>
+  <li>
+    <p>Distribución de frecuencias</p>
+
+    <ul>
+      <li>Tablas de frecuencias</li>
+      <li>Tablas de frecuencias bidimensionales</li>
+    </ul>
+  </li>
+  <li>
+    <p>Gráficos</p>
+
+    <ul>
+      <li>Diagrama de barras</li>
+      <li>Histograma</li>
+      <li>Diagrama de sectores</li>
+      <li>Diagrama de caja</li>
+      <li>Diagrama de medias</li>
+      <li>Diagrama de interacción</li>
+      <li>Diagrama de dispersión</li>
+      <li>Matriz de dispersión</li>
+    </ul>
+  </li>
+  <li>
+    <p>Estadística descriptiva</p>
+
+    <ul>
+      <li>Estadísticos</li>
+      <li>Estadísticos (cálculo detallado)</li>
+    </ul>
+  </li>
+  <li>
+    <p>Regresión</p>
+
+    <ul>
+      <li>Regresión lineal</li>
+      <li>Regresión no lineal</li>
+      <li>Comparación de modelos</li>
+      <li>Predicciones</li>
+      <li>Correlación</li>
+    </ul>
+  </li>
+  <li>
+    <p>Test paramétricos</p>
+  </li>
+  <li>
+    <p>Medias</p>
+
+    <ul>
+      <li>Test T para una muestra</li>
+      <li>Test T para dos muestras independientes</li>
+      <li>Test T para dos muestras pareadas</li>
+      <li>ANOVA</li>
+      <li>Cálculo del tamaño muestral para la media</li>
+      <li>Cálculo del tamaño muestral para el test T</li>
+    </ul>
+  </li>
+  <li>
+    <p>Varianzas</p>
+
+    <ul>
+      <li>Test F de Fisher</li>
+      <li>Test de Levene</li>
+    </ul>
+  </li>
+  <li>
+    <p>Proporciones</p>
+
+    <ul>
+      <li>Test para una proporción</li>
+      <li>Test para dos proporciones</li>
+      <li>Cálculo del tamaño muestral para una proproción</li>
+    </ul>
+  </li>
+  <li>
+    <p>Test no paramétricos</p>
+  </li>
+  <li>
+    <p>Normalidad</p>
+
+    <ul>
+      <li>Test de Lilliefors (Komogorov-Smirnov)</li>
+      <li>Test de Shapiro-Wilk</li>
+    </ul>
+  </li>
+  <li>
+    <p>Test U de Mann-Whitney para dos muestas independientes</p>
+  </li>
+  <li>
+    <p>Test de Wilcoxon para dos muestras pareadas</p>
+  </li>
+  <li>
+    <p>Test de Kruskal-Wallis para varias muestras independientes</p>
+  </li>
+  <li>
+    <p>Test de Friedman para medidas repetidas</p>
+  </li>
+  <li>
+    <p>Test Chi-cuadrado de independencia</p>
+  </li>
+  <li>
+    <p>Test Chi-cuadrado de bondad de ajuste</p>
+  </li>
+  <li>
+    <p>Concordancia</p>
+
+    <ul>
+      <li>Coeficiente de correlación intraclase</li>
+      <li>Kappa de Cohen</li>
+    </ul>
+  </li>
+  <li>
+    <p>Distribuciones de probabilidad</p>
+  </li>
+  <li>
+    <p>Distribuciones discretas</p>
+  </li>
+  <li>
+    <p>Binomial</p>
+
+    <ul>
+      <li>Probabilidades</li>
+      <li>Cuantiles</li>
+      <li>Gráfico de probabilidad</li>
+    </ul>
+  </li>
+  <li>
+    <p>Poisson</p>
+
+    <ul>
+      <li>Probabilidades</li>
+      <li>Cuantiles</li>
+      <li>Gráfico de probabilidad</li>
+    </ul>
+  </li>
+  <li>
+    <p>Distribuciones continuas</p>
+  </li>
+  <li>
+    <p>Chi-cuadrado</p>
+
+    <ul>
+      <li>Probabilidades</li>
+      <li>Cuantiles</li>
+      <li>Gráfico de probabilidad</li>
+    </ul>
+  </li>
+  <li>
+    <p>F de Fisher</p>
+
+    <ul>
+      <li>Probabilidades</li>
+      <li>Cuantiles</li>
+      <li>Gráfico de probabilidad</li>
+    </ul>
+  </li>
+  <li>
+    <p>Normal</p>
+
+    <ul>
+      <li>Probabilidades</li>
+      <li>Cuantiles</li>
+      <li>Gráfico de probabilidad</li>
+    </ul>
+  </li>
+  <li>
+    <p>T de student</p>
+
+    <ul>
+      <li>Probabilidades</li>
+      <li>Cuantiles</li>
+      <li>Gráfico de probabilidad</li>
+    </ul>
+  </li>
+  <li>
+    <p>Uniforme continua</p>
+
+    <ul>
+      <li>Probabilidades</li>
+      <li>Cuantiles</li>
+      <li>Gráfico de probabilidad</li>
+    </ul>
+  </li>
+  <li>
+    <p>Simulaciones</p>
+
+    <ul>
+      <li>Lanzamiento de monedas</li>
+      <li>Lanzamiento de dados</li>
+      <li>Ley de los casos raros</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="funcionalidades">Funcionalidades</h2>
+
+<ul>
+  <li>
+    <p>Menús y cuadros de diálogo diseñados para facilitar el aprendizaje,
+eliminando todas las opciones secundarias para conseguir una
+interfaz simple e intuitiva.</p>
+  </li>
+  <li>
+    <p>Diseño de asistentes que guían al usuario paso a paso y le asesoran
+en los análisis estadísticos. 
+<img src="images/wizard.png" alt="Asistente" /></p>
+  </li>
+  <li>
+    <p>Salidas en HTML que presentan los resultados de los análisis y sus
+interpretaciones de manera clara y concisa.
+<img src="images/output.png" alt="Salida" /></p>
+  </li>
+  <li>
+    <p>Gráficos sencillos basados en el moderno paquete ggplot2. 
+<img src="images/graphics1.png" alt="Salida gráfica" /></p>
+  </li>
+  <li>
+    <p>Posibilidad mostrar el desarrollo de los cálculos de algunos
+procedimientos estadísticos. 
+<img src="images/detailed_calculation.png" alt="Salida gráfica" /></p>
+  </li>
+</ul>
+
+<p>RKTeaching es mantenido por <a href="https://github.com/asalber">asalber</a> </p>
+
+			</div>
+        </div>
+        
+      </div>
+
+    </div>
+
+
+    <!-- Footer
+================================================== -->
+<footer class="bs-docs-footer" role="contentinfo">
+  <div class="container">
+    <span><img alt="Creative Common Atribution" src="/images/cclogo.png"> 2014 Alfredo Sánchez Alberca. Creado en <a href="http://jekyllrb.com">Jekyll</a> usando <a href="http://getbootstrap.com/">Bootstrap</a></span>.
+  </div>
+</footer>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/docs.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script src="/assets/js/jquery.tocify.js"></script>
+<script src="/assets/js/prettify.js"></script>
+<script>
+    $(function() {
+
+        var toc = $("#toc").tocify({
+          selectors: "h2,h3"
+        }).data("toc-tocify");
+
+        prettyPrint();
+        $(".optionName").popover({ trigger: "hover" });
+
+    });
+</script>
+
+<script>
+  window.twttr = (function (d,s,id) {
+    var t, js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return; js=d.createElement(s); js.id=id; js.async=1;
+    js.src="https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+    return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
+  }(document, "script", "twitter-wjs"));
+</script>
+
+
+
+
+<!-- Analytics
+================================================== -->
+<script>
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '4f0dc9fef5a1f55508000013');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
+
+  </body>
+</html>

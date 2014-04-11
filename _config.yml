@@ -1,0 +1,97 @@
+title:            RKTeaching
+description:      Un paquete de R para la enseñanza de Estadística
+disqus_shortname: aprendeconalf
+#Your site's domain goes here. Leave localhost server or blank when working locally.
+url:              
+
+# Owner/author information
+owner:
+  name:           Alfredo Sánchez Alberca
+  avatar:         foto_alf.jpg
+  bio:            "Profesor de Matemáticas en la Universidad San Pablo CEU."
+  email:          asalber@gmail.com
+  # Enlaces a redes sociales
+  twitter:        aprendeconalf
+  facebook:       
+  github:         asalber
+  stackexchange:  https://stackexchange.com/users/1506692/alf
+  linkedin:       asalber
+  instagram:      
+  flickr:         
+  tumblr:         
+  #Para Google Authorship https://plus.google.com/authorship
+  #google_plus:   https://plus.google.com/+AlfredoSánchezAlberca
+  google_plus:   https://plus.google.com/104904595276070039968
+
+# Background image to be tiled on all pages
+background: 
+
+# Analytics and webmaster tools stuff goes here
+google_analytics:  UA-49901858-1 
+#google_verify:     
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:         
+
+# Links to include in top navigation
+# For external links add external: true
+links:
+  - title: CEU
+    url: http://www.uspceu.com
+    external: true
+  - title: MiriadaX
+    url: http://miriadax.net
+   
+estadistica:
+  - title: Manual de Estadística
+    url: /manual-estadistica
+  - title: Ejercicios de Estadística
+    url: /ejercicios-estadistica
+r: 
+  - title: Bioestadística con R
+    url: bioestadistica-r
+  - title: Paquete RKTeaching
+    url: rkteaching   
+  
+spss:
+  - title: Bioestadística con SPSS
+    url: /bioestadistica-spss
+    
+calculo: 
+  - title: Apuntes de Cálculo
+    url: /apuntes-calculo
+  - title: Ejercicios de Cálculo
+    url: /ejercicios-calculo
+
+derive:
+  - title: Cálculo con Derive
+    url: /calculo-derive
+
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    Europe/Madrid
+future:      true
+pygments:    true
+markdown:    kramdown
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:categories/:title/
+
+# Amount of post to show on home page
+paginate: 5
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: true
+
+  coderay:
+    coderay_line_numbers: nil
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: class
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
